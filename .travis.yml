@@ -4,5 +4,5 @@ services:
 before_install:
         - docker build -t zawye9/speedtest .
 script:
-        - docker run -p 8080:80 zawye9/speedtest
+        - docker run zawye9/speedtest php --version
 
