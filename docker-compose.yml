@@ -1,0 +1,19 @@
+version: '3'
+services:
+        apache:
+                image: speed
+                ports: 
+                   - "8080:80"
+                links:
+                        - mysql
+        mysql:
+                image: mysql:5.7.17
+                ports:
+                   - "3306:3306"
+                volumes:
+                        - ./db_data:/var/lib/mysql
+                environment:
+                        MYSQL_ROOT_PASSWORD: speed
+                        MYSQL_DATABASE: speed
+                        MYSQL_USER: speed
+                        MYSQL_PASSWORD: speed
