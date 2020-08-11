@@ -3,6 +3,4 @@ services:
         - docker
 before_install:
         - docker build -t zawye9/speedtest .
-script:
-        - docker run zawye9/speedtest php --version
 
